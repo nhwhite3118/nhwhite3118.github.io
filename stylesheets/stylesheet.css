@@ -136,9 +136,8 @@ strong {
 img {
   position: relative;
   margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
+  padding: 0px 5px 0px 5px;
+  margin: 0px 10px 0px 10px;
   border: 1px solid #ebebeb;
 
   box-shadow: 0 0 5px #ebebeb;
@@ -266,7 +265,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 740px;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -358,6 +357,7 @@ Full-Width Styles
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
+  overflow-x:hidden;
 }
 
 #main_content {
@@ -369,7 +369,35 @@ Full-Width Styles
 }
 
 
+/*******************************************************************************
+Image carousel
+*******************************************************************************/
+.imagecarousel {
+  position: relative;
+  height: 233px;
+  margin-bottom: 30px;
+  display: flex;
+  width: inline-block;
+  gap: 20px;
+  max-width: 960px;
+}
+.imagecarousel img {
+  margin: 0px 0px;
+  box-shadow: 2px 2px 8px #8a8a8a;
+}
 
+.imagecarousel {
+  animation: bannermove 40s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(-331%);
+  }
+}
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
