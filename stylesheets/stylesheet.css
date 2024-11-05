@@ -395,7 +395,20 @@ Image carousel
     transform: translateX(-70%);
   }
   100% {
-    transform: translateX(-331%);
+    transform: translateX(-324%);
+  }
+}
+
+.imagecarouselRhythmo {
+  animation: bannermoveRhythmo 40s linear infinite;
+}
+
+@keyframes bannermoveRhythmo {
+  0% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(-307%);
   }
 }
 /*******************************************************************************
