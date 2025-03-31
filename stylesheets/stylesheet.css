@@ -274,7 +274,7 @@ Full-Width Styles
   display: block;
   position: absolute;
   top:0;
-  right: 10px;
+  right: 175px;
   z-index: 10;
   padding: 10px 50px 10px 10px;
   color: #fff;
@@ -283,6 +283,50 @@ Full-Width Styles
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+
+#linkedin_banner {
+  display: block;
+  position: absolute;
+  top:0;
+  right: 15px;
+  z-index: 10;
+  padding: 10px 50px 10px 10px;
+  color: #fff;
+  background: url('../images/InBug-White-21x22.png') #0A66C2 no-repeat 95% 50%;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  min-height: 21px;
+}
+
+#chathead {
+  z-index: 15;
+  font-weight: 700;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  max-width: 14px;
+  max-height: 14px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+#pronouns {
+  display: inline;
+  color: #fff;
+  font-size: 16px;
+  background: none;
+  text-shadow: #111 0px 0px 10px;
+  margin-bottom: 0px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-bottom: 0px;
+
+  font-weight: 500;
+  font-style: italic;
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
 }
 
 #header_wrap {
@@ -295,7 +339,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 40px 10px 20px 10px;
 }
 
 #project_title {
@@ -308,10 +352,24 @@ Full-Width Styles
 
 #project_tagline {
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: 500;
+  background: none;
+  text-shadow: #111 0px 0px 10px;
+  margin-left: 100px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#secondary_project_tagline {
+  color: #fff;
+  font-size: 16px;
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;
+  margin-left: 300px;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 #downloads {
