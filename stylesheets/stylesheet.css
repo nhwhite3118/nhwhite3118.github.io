@@ -27,6 +27,7 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  list-style-type: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -299,6 +300,33 @@ Full-Width Styles
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   min-height: 21px;
+}
+
+#navbar {
+  display: block;
+  position: sticky;
+  background: #000066;
+  z-index: 10;
+  font-weight: 500;
+  max-height: 14px;
+  top:0;
+}
+
+#navbar a {
+  font-weight: 550;
+  float: left;
+  display: block;
+  color: #000066;
+  background: #ffffff;
+  text-align: center;
+  padding: 8px 12px 8px 12px;
+  margin: 2px;
+  text-decoration: none;
+}
+
+#navbar a:hover, a:focus {
+  background: #e6f7ff;
+  text-shadow: #111 0px 0px 1px;
 }
 
 #chathead {
