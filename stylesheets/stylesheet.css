@@ -332,12 +332,13 @@ Full-Width Styles
 #chathead {
   z-index: 15;
   font-weight: 700;
+  float: right;
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
-  max-width: 14px;
-  max-height: 14px;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+  max-width: 200px;
+  max-height: 600px;
+  margin: 0px 10px 0px 10px;
+  padding: 5px;
 }
 
 #pronouns {
