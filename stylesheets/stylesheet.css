@@ -303,25 +303,40 @@ Full-Width Styles
 }
 
 #navbar {
-  display: block;
+  display: inline-flex;
+  justify-content: space-around;
   position: sticky;
-  background: #000066;
   z-index: 10;
   font-weight: 500;
-  max-height: 14px;
+  width: 100%;
   top:0;
+}
+
+#navbar ul{
+  display: inline-flex;
+  justify-content: space-around;
+  min-width: 740px;
+  padding: 2px 1rem;
+  min-height: 70px;
+}
+
+#navbar li{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 2px 1rem;
 }
 
 #navbar a {
   font-weight: 550;
-  float: left;
-  display: block;
-  color: #000066;
-  background: #ffffff;
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: space-around;
   padding: 8px 12px 8px 12px;
   margin: 2px;
   text-decoration: none;
+  color: #000066;
 }
 
 #navbar a:hover, a:focus {
@@ -449,7 +464,7 @@ Full-Width Styles
 }
 
 #main_content {
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 #footer_wrap {
@@ -549,6 +564,10 @@ Small Device Styles
     min-width: 320px;
     max-width: 480px;
     font-size: 11px;
+  }
+
+  ul{
+    padding: 2px 1rem;
   }
 
 }
