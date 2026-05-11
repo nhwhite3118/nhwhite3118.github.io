@@ -475,21 +475,21 @@ Full-Width Styles
 .imagecarousel {
   position: relative;
   width: 100%;
-  height: 350px; /* Set a fixed height for the carousel */
+  height: 450px; /* Increased height to accommodate thumbnails */
   margin: 30px auto;
   overflow: hidden;
   border: 1px solid #ebebeb;
   box-shadow: 0 0 5px #ebebeb;
   border-radius: 2px;
-  display: flex; /* Ensure images are laid out in a flex container */
-  align-items: center; /* Vertically center images */
-  justify-content: center; /* Horizontally center images */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.imagecarousel img {
+.imagecarousel img:not(.thumbnail) {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* Scale image to fit within the content box while maintaining aspect ratio */
+  height: 360px; /* Height for main image area */
+  object-fit: contain;
   display: block;
   flex-shrink: 0;
   border: none;
@@ -500,7 +500,7 @@ Full-Width Styles
 
 .prev-button, .next-button {
   position: absolute;
-  top: 50%;
+  top: 180px; /* Centered relative to the 360px image area */
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -521,26 +521,43 @@ Full-Width Styles
 }
 
 .carousel-pagination {
-  position: absolute;
-  bottom: 10px;
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 8px;
   z-index: 100;
+  padding: 10px 0;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  margin-top: auto;
+  overflow-x: auto; /* Allow horizontal scroll if too many thumbnails */
+  scrollbar-width: thin;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  opacity: 0.6;
+  /* Reset base img styles */
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  flex-shrink: 0;
 }
 
-.dot.active {
-  background-color: #007edf;
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.thumbnail.active {
+  border-color: #007edf;
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .spacing-paragraph {

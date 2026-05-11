@@ -45,25 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
       images.forEach((img, index) => {
         img.style.display = (index === currentImageIndex) ? 'block' : 'none';
       });
-      updatePaginationDots();
+      updatePagination();
     }
 
-    function updatePaginationDots() {
+    function updatePagination() {
       if (paginationContainer) {
         paginationContainer.innerHTML = '';
-        images.forEach((_, index) => {
-          const dot = document.createElement('span');
-          dot.classList.add('dot');
+        images.forEach((img, index) => {
+          const thumbnail = document.createElement('img');
+          thumbnail.src = img.src;
+          thumbnail.alt = `Thumbnail ${index + 1}`;
+          thumbnail.classList.add('thumbnail');
           if (index === currentImageIndex) {
-            dot.classList.add('active');
+            thumbnail.classList.add('active');
           }
-          dot.addEventListener('click', () => {
+          thumbnail.addEventListener('click', () => {
             stopAutoSlide();
             currentImageIndex = index;
             updateCarousel();
             startAutoSlide(); // Restart auto-slide after manual interaction
           });
-          paginationContainer.appendChild(dot);
+          paginationContainer.appendChild(thumbnail);
         });
       }
     }
